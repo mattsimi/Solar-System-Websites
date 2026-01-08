@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jupiter - Solar System Explorer</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../static/css/planet.css">
+</head>
+<body>
+    <!-- Back Button -->
+    <a href="index.html" class="btn btn-outline-light back-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+        </svg>
+        Back to Solar System
+    </a>
+
+    <!-- 3D Planet Render Section -->
+    <div id="planet-3d-container"></div>
+
+    <!-- Separator Line -->
+    <div class="separator"></div>
+
+    <!-- Static Content Section -->
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+
+                <!-- Title -->
+                <h1 class="planet-title text-center mb-5">JUPITER</h1>
+
+                <!-- About Section -->
+                <div class="card content-card mb-4">
+                    <div class="card-body">
+                        <h2 class="section-title">
+                            <i class="bi bi-info-circle me-2"></i>About Jupiter
+                        </h2>
+                        <p class="section-text">
+                            Jupiter is the largest planet in the solar system. It is a gas giant made mostly of
+                            gases and has a famous storm called the Great Red Spot.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Two Column Layout for Facts -->
+                <div class="row mb-4">
+                    <!-- Key Facts -->
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <div class="card content-card h-100">
+                            <div class="card-body">
+                                <h3 class="section-title">
+                                    <i class="bi bi-star-fill me-2"></i>Key Facts
+                                </h3>
+                                <ul class="facts-list">
+                                    <li>Largest planet</li>
+                                    <li>Made mostly of gas</li>
+                                    <li>Has many moons</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fun Facts -->
+                    <div class="col-md-6">
+                        <div class="card content-card h-100">
+                            <div class="card-body">
+                                <h3 class="section-title">
+                                    <i class="bi bi-lightbulb-fill me-2"></i>Fun Facts
+                                </h3>
+                                <ul class="facts-list">
+                                    <li>Jupiter's storm is bigger than Earth</li>
+                                    <li>It has over 70 moons</li>
+                                    <li>Strong gravity</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Planet Connection -->
+                <div class="card content-card highlight-card mb-4">
+                    <div class="card-body">
+                        <h3 class="section-title">
+                            <i class="bi bi-diagram-3-fill me-2"></i>Planet Connection
+                        </h3>
+                        <p class="section-text mb-0">
+                            Jupiter is much bigger than Earth and is made of gas, while Earth is solid. Its
+                            strong gravity helps protect smaller planets.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Did You Know -->
+                <div class="card content-card info-card mb-4">
+                    <div class="card-body">
+                        <h3 class="section-title">
+                            <i class="bi bi-question-circle-fill me-2"></i>Did You Know?
+                        </h3>
+                        <p class="section-text mb-0">
+                            Jupiter helps protect other planets by pulling in asteroids.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Quick Quiz -->
+                <div class="card content-card quiz-card">
+                    <div class="card-body">
+                        <h3 class="section-title mb-4">
+                            <i class="bi bi-patch-question-fill me-2"></i>Quick Quiz
+                        </h3>
+
+                        <!-- Quiz Question 1 -->
+                        <div class="quiz-item mb-3">
+                            <div class="quiz-question-box">
+                                <p class="quiz-question mb-2">
+                                    <strong>Q1:</strong> Is Jupiter solid?
+                                </p>
+                                <button class="btn btn-sm btn-outline-warning reveal-btn" onclick="revealAnswer(1)">
+                                    Show Answer
+                                </button>
+                                <div class="quiz-answer mt-2" id="answer-1" style="display: none;">
+                                    <div class="alert alert-success mb-0">
+                                        <strong>Answer:</strong> No
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quiz Question 2 -->
+                        <div class="quiz-item mb-3">
+                            <div class="quiz-question-box">
+                                <p class="quiz-question mb-2">
+                                    <strong>Q2:</strong> Is Jupiter bigger or smaller than Earth?
+                                </p>
+                                <button class="btn btn-sm btn-outline-warning reveal-btn" onclick="revealAnswer(2)">
+                                    Show Answer
+                                </button>
+                                <div class="quiz-answer mt-2" id="answer-2" style="display: none;">
+                                    <div class="alert alert-success mb-0">
+                                        <strong>Answer:</strong> Bigger
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quiz Question 3 -->
+                        <div class="quiz-item">
+                            <div class="quiz-question-box">
+                                <p class="quiz-question mb-2">
+                                    <strong>Q3:</strong> Is Jupiter a solid planet?
+                                </p>
+                                <button class="btn btn-sm btn-outline-warning reveal-btn" onclick="revealAnswer(3)">
+                                    Show Answer
+                                </button>
+                                <div class="quiz-answer mt-2" id="answer-3" style="display: none;">
+                                    <div class="alert alert-success mb-0">
+                                        <strong>Answer:</strong> No, it's a gas giant
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Planet 3D Script -->
+    <script src="../static/js/jupiter.js"></script>
+
+    <!-- Quiz Script -->
+    <script>
+        function revealAnswer(questionNumber) {
+            const answerDiv = document.getElementById('answer-' + questionNumber);
+            const button = event.target;
+
+            if (answerDiv.style.display === 'none') {
+                answerDiv.style.display = 'block';
+                button.textContent = 'Hide Answer';
+                button.classList.remove('btn-outline-warning');
+                button.classList.add('btn-warning');
+            } else {
+                answerDiv.style.display = 'none';
+                button.textContent = 'Show Answer';
+                button.classList.remove('btn-warning');
+                button.classList.add('btn-outline-warning');
+            }
+        }
+    </script>
+</body>
+</html>

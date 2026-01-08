@@ -1,0 +1,277 @@
+/* Planet page styling */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, #000000, #1a1a2e);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5);
+    border-left: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(255, 215, 0, 0.6), rgba(255, 215, 0, 0.3));
+    border-radius: 6px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgba(255, 215, 0, 0.8), rgba(255, 215, 0, 0.5));
+}
+
+/* Firefox Custom Scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 215, 0, 0.6) rgba(0, 0, 0, 0.5);
+}
+
+/* 3D Planet Container */
+#planet-3d-container {
+    width: 100vw;
+    max-width: 100%;
+    height: 60vh;
+    max-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#planet-3d-container canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Separator Line */
+.separator {
+    width: 80%;
+    max-width: 600px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ffd700, transparent);
+    margin: 40px auto;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Back button styling */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateX(-5px);
+}
+
+/* Planet Title */
+.planet-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffd700;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    letter-spacing: 3px;
+}
+
+/* Bootstrap Card Overrides */
+.content-card {
+    background: rgba(10, 10, 30, 0.6);
+    border: 1px solid rgba(100, 100, 150, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+    border-color: rgba(255, 215, 0, 0.4);
+}
+
+.content-card .card-body {
+    padding: 2rem;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 1.5rem;
+    color: #ffd700;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.section-title i {
+    color: #ffd700;
+}
+
+.section-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+}
+
+/* Facts Lists */
+.facts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.facts-list li {
+    font-size: 1.1rem;
+    line-height: 2;
+    color: #e0e0e0;
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.facts-list li:before {
+    content: "★";
+    position: absolute;
+    left: 0;
+    color: #ffd700;
+    font-size: 1.2rem;
+}
+
+/* Highlight Card */
+.highlight-card {
+    background: rgba(255, 215, 0, 0.05);
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+}
+
+.highlight-card:hover {
+    border-color: rgba(255, 215, 0, 0.5);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+/* Info Card */
+.info-card {
+    background: rgba(65, 105, 225, 0.05);
+    border: 2px solid rgba(65, 105, 225, 0.3);
+}
+
+.info-card:hover {
+    border-color: rgba(65, 105, 225, 0.5);
+}
+
+/* Quiz Card */
+.quiz-card {
+    background: rgba(138, 43, 226, 0.05);
+    border: 2px solid rgba(138, 43, 226, 0.3);
+}
+
+.quiz-card:hover {
+    border-color: rgba(138, 43, 226, 0.5);
+}
+
+/* Quiz Items */
+.quiz-item {
+    padding: 1.5rem;
+    background: rgba(10, 10, 30, 0.5);
+    border-radius: 10px;
+    border-left: 4px solid #ffd700;
+}
+
+.quiz-question {
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.reveal-btn {
+    transition: all 0.3s ease;
+}
+
+.reveal-btn:hover {
+    transform: scale(1.05);
+}
+
+.quiz-answer .alert {
+    background: rgba(40, 167, 69, 0.2);
+    border: 1px solid rgba(40, 167, 69, 0.5);
+    color: #90ee90;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .planet-title {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .section-text,
+    .facts-list li,
+    .quiz-question {
+        font-size: 1rem;
+    }
+
+    .content-card .card-body {
+        padding: 1.5rem;
+    }
+
+    .quiz-item {
+        padding: 1rem;
+    }
+
+    #planet-3d-container {
+        height: 50vh;
+        max-height: 400px;
+    }
+
+    .back-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .planet-title {
+        font-size: 1.5rem;
+    }
+
+    .separator {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    .content-card .card-body {
+        padding: 1rem;
+    }
+}

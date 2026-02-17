@@ -12,13 +12,7 @@
     <link rel="stylesheet" href="../static/css/planet.css">
 </head>
 <body>
-    <!-- Back Button -->
-    <a href="index.html" class="btn btn-outline-light back-button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-        </svg>
-        Back to Solar System
-    </a>
+    
 
     <!-- 3D Planet Render Section -->
     <div id="planet-3d-container"></div>
@@ -33,6 +27,12 @@
 
                 <!-- Title -->
                 <h1 class="planet-title text-center mb-5">EARTH</h1>
+
+                <!-- About this project -->
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#aboutProjectModal">
+                    <i class="bi bi-journal-text me-2"></i>About This Project
+                </button>
+            </div>
 
                 <!-- About Section -->
                 <div class="card content-card mb-4">
@@ -152,14 +152,14 @@
                         <div class="quiz-item">
                             <div class="quiz-question-box">
                                 <p class="quiz-question mb-2">
-                                    <strong>Q3:</strong> What does Earth have that Mercury does not?
+                                    <strong>Q3:</strong> Which planet is Earth in the Solar System?
                                 </p>
                                 <button class="btn btn-sm btn-outline-warning reveal-btn" onclick="revealAnswer(3)">
                                     Show Answer
                                 </button>
                                 <div class="quiz-answer mt-2" id="answer-3" style="display: none;">
                                     <div class="alert alert-success mb-0">
-                                        <strong>Answer:</strong> Water and air
+                                        <strong>Answer:</strong> Our home planet, the fifth largest and third from the sun
                                     </div>
                                 </div>
                             </div>
@@ -170,6 +170,189 @@
             </div>
         </div>
     </div>
+
+
+    <!-- About the project -->
+    <div class="modal fade project-modal" id="aboutProjectModal" tabindex="-1" aria-labelledby="aboutProjectModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="aboutProjectModalLabel">
+                        <i class="bi bi-info-square me-2"></i>About This Project
+                    </h4>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <h5>Quick Start Guide</h5>
+                    <p class="mb-0">
+                    Step 1:
+                    Approach the solar system model, scan the QR code located on the base.
+                    Step 2:
+                    Read the short introduction page explaining how the project works.
+                    Step 3:
+                    Scan the qr code to open a plannet page.
+                    Step 4:
+                    The dedicated page opens explains about the planet using calm, educational language and a short quick quiz located at the bottom of the page.
+                    Step 5:
+                    Navigate through the information on the page and visualise the physical plannets on the project to get an understanding of the solar system.
+                    This simple interaction flow ensures that users of all ages can understand and enjoy the functionality of the project both physical as well as digital. 
+                    </p>
+
+                    <p>
+                        This project is an interactive physical-digital solar system that promotes participation and inquiry-based learning.
+                        In order to provide visitors a more engaging and unforgettable understanding of the planets, it combines a handcrafted
+                        physical display with digital content.
+                    </p>
+
+                    <p>
+                        By enabling individuals to physically visit a planet and then digitally evaluate its data, the objective is to transcend
+                        beyond passive learning. Because it encourages curiosity, investigation, and active involvement, this method is particularly
+                        helpful for children and school-age children.
+                    </p>
+
+                    <hr>
+
+                    <h5>Why Earth Was Developed First</h5>
+                    <p>
+                        Earth has been designed as a fully realized model of how each planet would operate inside the system at this point in the project.
+                        Because Earth is well-known to users and offers a solid point of reference for comprehending the distinctions across planets,
+                        it was selected initially.
+                    </p>
+
+                    <p class="mb-2">The Earth page demonstrates:</p>
+                    <ul>
+                        <li>The visual style that will be used across all planets</li>
+                        <li>The structure of the information (About, Facts, Connections, Quiz)</li>
+                        <li>How interaction will guide learning</li>
+                    </ul>
+                    <p>This page acts as a working prototype for the rest of the solar system.</p>
+
+                    <hr>
+
+                    <h5>Digital Earth &amp; 3D Programming</h5>
+                    <p>
+                        Instead of being a static image, the Earth on this page was produced using 3D programming. This strengthened the sense of movement
+                        and realism by making the Earth look like a revolving sphere in space.
+                    </p>
+
+                    <p class="mb-2">Creating the Earth in 3D was a technically demanding process, requiring:</p>
+                    <ul>
+                        <li>Understanding of 3D space and perspective</li>
+                        <li>Texturing the surface to represent land and water accurately</li>
+                        <li>Positioning lighting to simulate sunlight</li>
+                        <li>Optimising performance for smooth interaction</li>
+                    </ul>
+
+                    <p>
+                        Although this procedure greatly lengthened the project's development time, it was crucial in making sure it felt engaging and immersive
+                        rather than flat or merely informative.
+                    </p>
+
+                    <hr>
+
+                    <h5>Navigation &amp; Interaction Design</h5>
+                    <p>
+                        There is a "Back to Solar System" button at the top of the page. This button effectively conveys the desired navigation structure of the
+                        finished product, even if it is not yet operational. When this button is finished, users will be able to switch between the view of the
+                        entire solar system and particular planets with ease.
+                    </p>
+
+                    <p>
+                        In order to reinforce learning and motivate users to consider what they have learned, there is a quiz section at the bottom of the page.
+                        As a result, the site becomes an active learning tool rather than just a reading experience.
+                    </p>
+
+                    <hr>
+
+                    <h5>NFC &amp; QR Code Limitation</h5>
+                    <p>
+                        The initial goal of the project was to use NFC tags inserted into each real globe so that users could touch their device to access digital content.
+                    </p>
+
+                    <p>
+                        This interaction could not be carried out at this time due to the delayed arrival of the NFC components. QR codes are being used as a workaround
+                        to link the digital content to the physical model.
+                    </p>
+
+                    <p>
+                        This restriction is flexible during the development process and has no impact on the project's central idea. The technique is designed to allow
+                        for the eventual addition of NFC without altering the digital content's structure.
+                    </p>
+
+                    <hr>
+
+                    <h5>Project Development &amp; Progress</h5>
+                    <p>
+                        Each planet in this project's iterative development builds on the one before it. The Earth page shows the system as it is now and gives a good
+                        picture of how the finished project will operate.
+                    </p>
+
+                    <p class="mb-2">Future development will include:</p>
+                    <ul>
+                        <li>Completing the remaining planet pages</li>
+                        <li>Activating navigation between planets</li>
+                        <li>Integrating NFC interaction</li>
+                        <li>Refining physical controls and interactivity</li>
+                        <li>Making the physical project move and function</li>
+                        <li>Creating a digital solarsystem as a front page</li>
+                    </ul>
+
+                    <hr>
+
+
+                    <h5>Reflection</h5>
+                    <p class="mb-0">
+                        This project shows how digital design, interface design, and physical fabrication can collaborate to produce educational experiences that are meaningful.
+                        The difficulties encountered thus far, such as 3D development and hardware constraints, have led to a better comprehension of both technical and design procedures.
+                    </p>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* ONLY About Project style */
+        #aboutProjectModal .modal-content{
+          background-color:#0b0f1a !important;   /* dark space */
+          color:#ffffff !important;
+          border:1px solid rgba(255,255,255,.15) !important;
+        }
+      
+        #aboutProjectModal .modal-header,
+        #aboutProjectModal .modal-footer{
+          border-color:rgba(255,255,255,.12) !important;
+        }
+      
+        #aboutProjectModal .modal-body p,
+        #aboutProjectModal .modal-body li,
+        #aboutProjectModal .modal-body ul{
+          color:rgba(255,255,255,.90) !important;
+        }
+      
+        #aboutProjectModal .modal-title,
+        #aboutProjectModal .modal-body h5{
+          color:#ffffff !important;
+        }
+      
+        #aboutProjectModal hr{
+          border-color:rgba(255,255,255,.15) !important;
+          opacity:1 !important;
+        }
+      
+        /* Ensure the X icon is visible */
+        #aboutProjectModal .btn-close{
+          filter: invert(1) !important;
+        }
+      </style>
+      
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">

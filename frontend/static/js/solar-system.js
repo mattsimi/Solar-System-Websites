@@ -310,7 +310,7 @@ function animate() {
         if (animationProgress >= 1) {
             // Animation complete - redirect to planet page after brief pause
             const planetName = targetPlanet.userData.name.toLowerCase();
-            window.location.href = `earth.html`;
+            window.location.href = `${planetName}.html`;
         } else {
             // Zoom phase is 80% of total time (first 2 seconds)
             const zoomPhase = Math.min(animationProgress / 0.8, 1);
